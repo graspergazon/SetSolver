@@ -1,6 +1,8 @@
 # SetSolver
 Solving the game of Set with a camera
 
+See [here](https://en.wikipedia.org/wiki/Set_(card_game)) for info about the game.
+
 ## Quickstart
 
 Start the application with:
