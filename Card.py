@@ -1,11 +1,12 @@
 import collections
+import random
 
 Card = collections.namedtuple('Card', ['color', 'number', 'symbol', 'shading'])
 
 
 class SetDeck:
     colors = 'red green purple'.split()
-    numbers = [str(n) for n in range(1, 3)]
+    numbers = [n for n in range(1, 4)]
     symbols = 'diamond squiggle oval'.split()
     shadings = 'solid striped open'.split()
 
@@ -18,3 +19,9 @@ class SetDeck:
 
     def __len__(self):
         return len(self._cards)
+
+    def __getitem__(self, position):
+        return self._cards[position]
+
+    def getRandomCards(self, number):
+        return random.sample(list(self._cards),12)
